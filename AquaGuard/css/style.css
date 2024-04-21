@@ -1,5 +1,5 @@
 :root{
-    --pink:#e84393;
+    --green:#64e843;
 }
 *{
     margin:0; 
@@ -24,10 +24,10 @@ section{
 .heading{
     text-align: center;
     font-size: 4rem;
-    color:#333;
+    color:white;
     padding:1rem;
     margin:2rem 0;
-    background:rgba(255, 51, 153,.05);
+    background:#64e843;
 }
 .heading span{
     color:var(--pink);
@@ -36,14 +36,14 @@ section{
     display: inline-block;
     margin-top: 1rem;
     border-radius: 5rem;
-    background:whitesmoke;
-    color: #333;
+    background-color:#333;
+    color: #fff;
     padding:.9rem 3.5rem;
     cursor: pointer;
     font-size: 1.7rem;
 }
 .btn:hover{
-    background:var(--pink);
+    background:var(--green);
 }
 header{
     position: fixed;
@@ -58,7 +58,7 @@ header{
 }
 header .logo{
     font-size: 3rem;
-    color: green;
+    color: #64e843;
     font-weight: bolder;
 }
 header .logo span{
@@ -70,7 +70,7 @@ header .navbar a{
     color:#666;
 }
 header .navbar a:hover{
-    color:var(--pink);
+    color:var(--green);
 }
 header .icons a{
     font-size: 2.5rem;
@@ -78,7 +78,7 @@ header .icons a{
     margin-left: 1.5rem;
 }
 header .icons a:hover{
-    color:var(--pink);
+    color:var(--green);
 }
 header #toggler{
     display: none;
@@ -97,11 +97,18 @@ header .fa-bars{
     align-items: center;
     min-height: 100vh;
     background:url(../images/shade-balls-1626384500990.webp) no-repeat ;
+    
+    /* clip-path: polygon(100% 0, 22% 100%, 100% 100%); */
     background-size: cover;
+
+    /* background {clip-path: polygon(100% 0, 22% 100%, 100% 100%); } */
     background-position: center;
 }
 .home .content{
     max-width: 50rem;
+}
+.content{
+    margin-bottom: -140px;
 }
 .home .content h3{
     font-size: 6rem;
@@ -402,6 +409,7 @@ header .fa-bars{
     }
     header{
         padding:2rem;
+        width: 1;
     }
     section{
         padding:2rem;
@@ -409,11 +417,17 @@ header .fa-bars{
     .home{
         background-position: left;
     }
+    .w-100{
+        width: 50%;
+    }
 }
 
 @media (max-width:768px){
     header .fa-bars{
         display: block;
+    }
+    .w-100{
+        width: 50%;
     }
     header .navbar{
         position:absolute;
@@ -453,6 +467,9 @@ header .fa-bars{
     .heading{
         font-size: 3rem;
     }
+    .w-100{
+        width: 50%;
+    }
 }
 .carousel-indicators img{
     width: 70px;
@@ -478,7 +495,8 @@ header .fa-bars{
     width: 50%;
     height: 414px;
     padding-left: 10px;
-    margin-top: 50px;
+    margin-top: 35px;
+    margin-left: 50px ;
 }
 .carousel-item img{
     height: 414px;
@@ -494,7 +512,7 @@ header .fa-bars{
   }
   .pies p{
     margin-top: 20px;
-    margin-left: 8px;
+    margin-left: 20px;
     font-size: 17px;
   }
   .pie {
@@ -528,6 +546,7 @@ header .fa-bars{
             mask:radial-gradient(farthest-side,#0000 calc(99% - var(--b)),#000 calc(100% - var(--b)));
   }
   .pie:after {
+    display: none;
     inset:calc(50% - var(--b)/2);
     background:var(--c);
     transform:rotate(calc(var(--p)*3.6deg)) translateY(calc(50% - var(--w)/2));
@@ -548,4 +567,6 @@ header .fa-bars{
   .cbsa{
     font-size: 45px;
   }
-  
+  form{
+    margin-right: 80px;
+  }
